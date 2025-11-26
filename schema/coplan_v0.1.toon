@@ -1,0 +1,19 @@
+type: coplan_planstate
+version: 0.1.0
+
+# Skeleton schema for CoPlan outputs.
+# This will evolve with real usage and feedback.
+
+fields:
+  workspace:
+    description: "Root or label for the set of repos being planned."
+  repos:
+    description: "List of repos included in this plan."
+  components:
+    description: "Key components or subsystems inferred from the repos."
+  risks:
+    description: "High level risks or gaps inferred from structure and docs."
+  opportunities:
+    description: "Potential improvements or strategic moves."
+  waves:
+    description: "Sequenced waves or horizons of work, if inferred."
