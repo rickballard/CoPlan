@@ -1,0 +1,28 @@
+{
+  "Workspace": "C:\\Users\\Chris",
+  "Generated": "2025-11-28T04:30:55.4292287Z",
+  "Repos": [
+    {
+      "Name": "CoMasterPlan",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoMasterPlan",
+      "DocFileCount": 7,
+      "CodeFileCount": 0,
+      "ExampleDocSamples": [
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoMasterPlan\\docs\\intent\\notes\\20251125\\CoSync_HP_20251125T074118Z.md",
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoMasterPlan\\docs\\intent\\notes\\20251125\\CoSync_HP_CoPlan_20251125T230310Z.md",
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoMasterPlan\\docs\\intent\\notes\\20251128\\CoSync_HP_CoPlan_20251128T043037Z.md"
+      ]
+    },
+    {
+      "Name": "CoSteward",
+      "Path": "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward",
+      "DocFileCount": 179,
+      "CodeFileCount": 41,
+      "ExampleDocSamples": [
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\.github\\ISSUE_TEMPLATE\\bug.md",
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\.github\\ISSUE_TEMPLATE\\ops-task.md",
+        "C:\\Users\\Chris\\Documents\\GitHub\\CoSteward\\.github\\PULL_REQUEST_TEMPLATE.md"
+      ]
+    }
+  ]
+}

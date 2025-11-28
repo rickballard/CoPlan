@@ -2,7 +2,7 @@
 # Role:
 #   Walk a list of repos and emit a coarse "plan state" summary.
 # Notes:
-#   This is an MVP stub. It focuses on structure, not deep semantics.
+#   MVP stub: focuses on structure and doc/code density, not deep semantics.
 
 [CmdletBinding()]
 param(
@@ -25,15 +25,26 @@ foreach ($repo in $RepoPaths) {
 
     $name = Split-Path $repo -Leaf
 
-    $docs  = Get-ChildItem -LiteralPath $repo -Recurse -Include '*.md','*.rst' -ErrorAction SilentlyContinue
-    $code  = Get-ChildItem -LiteralPath $repo -Recurse -Include '*.ps1','*.py','*.js','*.ts','*.cs','*.go' -ErrorAction SilentlyContinue
+    $docs = Get-ChildItem -LiteralPath $repo -Recurse -Include '*.md','*.rst' -ErrorAction SilentlyContinue
+    $code = Get-ChildItem -LiteralPath $repo -Recurse -Include '*.ps1','*.py','*.js','*.ts','*.cs','*.go' -ErrorAction SilentlyContinue
+
+    $docList  = @()
+    if ($docs) { $docList  = @($docs) }
+
+    $codeList = @()
+    if ($code) { $codeList = @($code) }
+
+    $sampleDocs = @()
+    if ($docList.Count -gt 0) {
+        $sampleDocs = $docList | Select-Object -First 3 -ExpandProperty FullName
+    }
 
     $items += [pscustomobject]@{
         Name              = $name
         Path              = $repo
-        DocFileCount      = $docs.Count
-        CodeFileCount     = $code.Count
-        ExampleDocSamples = $docs | Select-Object -First 3 -ExpandProperty FullName
+        DocFileCount      = $docList.Count
+        CodeFileCount     = $codeList.Count
+        ExampleDocSamples = $sampleDocs
     }
 }
 
